@@ -20,7 +20,7 @@
         <main class="reviews">
             <section class="review__section">
                 <h2 class="review__title" th:text="${review.title}">Wynwood Walls</h2>
-                <img src="../static/images/Wynwood.jpg" th:src="@{review.imageUrl}"
+                <img src="../static/images/Wynwood.jpg" th:src="${review.imageUrl}"
                     alt="Picture of Attraction">
                 <p class="review__desc" th:text="${review.description}">Located in a neighborhood between the
                     design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists,

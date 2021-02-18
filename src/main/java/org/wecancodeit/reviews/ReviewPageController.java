@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
 @Controller
-public class CityController {
+public class ReviewPageController {
 
 
     @RequestMapping("/review-page")
@@ -18,7 +18,7 @@ public class CityController {
                 "                    experience.\n" +
                 "                    You can find high end restaurants as well as food trucks with a variety of type of food.\n" +
                 "                    Every second Saturday of the month, the neighborhood has an event called \"Art Walk\" where galleries\n" +
-                "                    are open until midnight and local artist setup shops in an open area, bazar alike.", "static/images/Wynwood.jpg", "Miami");
+                "                    are open until midnight and local artist setup shops in an open area, bazar alike.", "/images/Wynwood.jpg", "Miami");
 
 
         model.addAttribute("review", review);

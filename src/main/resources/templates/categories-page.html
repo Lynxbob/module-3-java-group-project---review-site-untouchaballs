@@ -13,14 +13,16 @@
 
 <body>
     <header class="city__header">
-        <h1 class="city__title" th:text="${review.categoryName}">Miami</h1>
+        <h1 class="city__title" th:text="${city.name}">Miami</h1>
     </header>
 
 
     <div class="attractions__container">
         <main class="attractions">
         <th:block th:each="review: ${city.reviews}">
-            <h3 th:text= "${review}"><a href="./review-page.html" th:href="/categories-page/${review}">Wynwood Walls</a></h3>
+            <a href="./review-page.html" th:href="@{/categories-page/${review}}">
+            <h3 th:text= "${review}">Wynwood Walls</h3>
+            </a>
         </th:block>
 
 
