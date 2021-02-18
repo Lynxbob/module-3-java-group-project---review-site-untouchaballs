@@ -23,7 +23,7 @@ public class CityController {
         miami.addToReviews(review);
 
 
-        model.addAttribute("City", miami);
+        model.addAttribute("city", miami);
         return "review-page";
 
     }

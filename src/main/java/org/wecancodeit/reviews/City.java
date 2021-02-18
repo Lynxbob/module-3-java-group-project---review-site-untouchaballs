@@ -1,5 +1,6 @@
 package org.wecancodeit.reviews;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 public class City {
@@ -8,9 +9,11 @@ public class City {
     private String imageUrl;
 
 
+
     public City(String name, String imageUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
+        this.reviews = new ArrayList<>();
     }
 
 

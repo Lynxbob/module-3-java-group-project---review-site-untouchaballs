@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <title>Hiker's guide to the US</title>
 
     
@@ -11,15 +13,15 @@
 
 <body>
     <header class="city__header">
-        <h1 class="city__title" th:text="${City.name}">Miami</h1>
+        <h1 class="city__title" th:text="${city.name}">Miami</h1>
     </header>
 
     <div class="container">
         <main class="reviews">
-            <section class="review">
-                <th:block th:each="review:${City.reviews}">
+            <section class="review__section">
+                <th:block th:each="review : ${city.reviews}">
                 <h2 class="review__title" th:text="${review.title}">Wynwood Walls</h2>
-                <img src="../static/images/Wynwood.jpg" th:src="@{review.imageUrl}"
+                <img src="../static/images/Wynwood.jpg" th:src="${review.imageUrl}"
                     alt="Picture of Attraction">
                 <p class="review__desc" th:text="${review.description}">Located in a neighborhood between the
                     design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists,
