@@ -13,13 +13,12 @@
 
 <body>
     <header class="city__header">
-        <h1 class="city__title" th:text="${city.name}">Miami</h1>
+        <h1 class="city__title" th:text="${review.categoryName}">Miami</h1>
     </header>
 
     <div class="container">
         <main class="reviews">
             <section class="review__section">
-                <th:block th:each="review : ${city.reviews}">
                 <h2 class="review__title" th:text="${review.title}">Wynwood Walls</h2>
                 <img src="../static/images/Wynwood.jpg" th:src="${review.imageUrl}"
                     alt="Picture of Attraction">
@@ -32,7 +31,6 @@
                     You can find high end restaurants as well as food trucks with a variety of type of food.
                     Every second Saturday of the month, the neighborhood has an event called "Art Walk" where galleries
                     are open until midnight and local artist setup shops in an open area, bazar alike. </p>
-                </th:block>
             </section>
         </main>
     </div>

@@ -4,12 +4,14 @@ public class Review {
     private String title;
     private String description;
     private String imageUrl;
+    private String categoryName;
 
 
-    public Review(String title, String description, String imageUrl) {
+    public Review(String title, String description, String imageUrl, String categoryName) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
+        this.categoryName = categoryName;
     }
 
     public String getTitle() {
@@ -22,5 +24,9 @@ public class Review {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
     }
 }
