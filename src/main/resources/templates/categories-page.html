@@ -3,29 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <title>Hiker's guide to the US</title>
 
 
 </head>
 
-<body>
-    <header class="city__header">
-        <h1 class="city__title" th:text="${review.categoryName}">Miami</h1>
+    <body>
+    <header class="category__header">
+        <h1 class="city__title" th:text="${category.name}">Miami</h1>
     </header>
-
-
-    <div class="attractions__container">
-        <main class="attractions">
-        <th:block th:each="review: ${city.reviews}">
-            <h3 th:text= "${review}"><a href="./review-page.html" th:href="/categories-page/${review}">Wynwood Walls</a></h3>
-        </th:block>
-
+    <div class="reviews__container">
+        <main class="reviews">
+                    <th:block th:each="review: ${category.reviews}">
+                        <h3 th:text= "${review}"><a href="./review-page.html" th:href="/categories-page/${review}">Wynwood Walls</a></h3>
+                    </th:block>
 
         </main>
     </div>
 
-</body>
+
+    </body>
+
+
 </html>
+
+
+<!--<body>-->
+<!--<header class="city__header">-->
+<!--    <h1 class="city__title" th:text="${review.categoryName}">Miami</h1>-->
+<!--</header>-->
+
+
+<!--<div class="attractions__container">-->
+<!--    <main class="attractions">-->
+<!--        <th:block th:each="review: ${city.reviews}">-->
+<!--            <h3 th:text= "${review}"><a href="./review-page.html" th:href="/categories-page/${review}">Wynwood Walls</a></h3>-->
+<!--        </th:block>-->
+
+
+<!--    </main>-->
+<!--</div>-->
+
+<!--</body>-->

@@ -3,17 +3,18 @@ package org.wecancodeit.reviews;
 import java.util.ArrayList;
 import java.util.Collection;
 
-public class City {
+public class Category {
     private String name;
-    private Collection<Review> reviews;
     private String imageUrl;
+    private Collection<Review> reviews;
 
 
 
-    public City(String name, String imageUrl) {
+    public Category(String name, String imageUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
         this.reviews = new ArrayList<>();
+
     }
 
 
@@ -21,12 +22,12 @@ public class City {
         return name;
     }
 
-    public Collection<Review> getReviews() {
-        return reviews;
-    }
-
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    public Collection<Review> getReviews() {
+        return reviews;
     }
 
     public void addToReviews(Review review) {
