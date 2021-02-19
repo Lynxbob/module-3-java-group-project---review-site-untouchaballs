@@ -5,8 +5,8 @@ import java.util.Collection;
 
 public class Category {
     private String name;
-    private Collection<String> reviews;
     private String imageUrl;
+    private Collection<String> reviews;
 
 
 
@@ -14,6 +14,7 @@ public class Category {
         this.name = name;
         this.imageUrl = imageUrl;
         this.reviews = new ArrayList<>();
+
     }
 
 
@@ -31,6 +32,7 @@ public class Category {
 
     public void addToReviews(String reviewName) {
         reviews.add(reviewName);
+      
     }
 
 }
