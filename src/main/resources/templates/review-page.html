@@ -6,21 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiker's guide to the US</title>
 
-    
+    <link rel="stylesheet" href="./review.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+  
+        body{
+            font-family: Oswald;
+        }
+      </style>
 </head>
 
 <body>
+    <div class="header__container">
+    <div>
     <header class="city__header">
         <h1 class="city__title" th:text="${City.name}">Miami</h1>
+    </div>
+        <div class="header__home">
+        <h2>Home</h2>
+    </div>
+</div>
     </header>
 
     <div class="container">
         <main class="reviews">
             <section class="review">
                 <th:block th:each="review:${City.reviews}">
+                    <div class="city__title__container">
                 <h2 class="review__title" th:text="${review.title}">Wynwood Walls</h2>
-                <img src="../static/images/Wynwood.jpg" th:src="@{review.imageUrl}"
+            </div>
+            <div class="review__image_container">
+                <div class="review__iamge__div">
+                <img src="../static/images/Wynwood.jpg"  th:src="@{review.imageUrl}"
                     alt="Picture of Attraction">
+                </div>
                 <p class="review__desc" th:text="${review.description}">Located in a neighborhood between the
                     design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists,
                     creatives and young innovators alike.
@@ -33,6 +52,7 @@
                 </th:block>
             </section>
         </main>
+    </div>
     </div>
 
 </body>
