@@ -1,0 +1,30 @@
+.city__title{
+    border-bottom: 2px solid black;
+}
+.review__title{
+    display: flex;
+    justify-content: start;
+    width: 200px;
+    border-bottom: 2px solid black;
+}
+/* .city__title__container{
+border-bottom: 2px solid black;
+width: 200px;
+padding-bottom: 5px;
+} */
+/* 
+.review__image__div{
+    width: 1000px;
+} */
+.review__desc{
+    width: 700px;
+}
+.header__home{
+    display: flex;
+    justify-content:end ;
+}
+.header__container{
+    display: flex;
+    flex-direction: row;
+    
+}

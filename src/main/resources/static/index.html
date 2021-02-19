@@ -1,22 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+      body{
+          font-family: Oswald;
+      }
+    </style>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hiker's guide to the US</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-
-<body>
+<h1 class="main__header__title">Hiker's guide to the US</h1>
+<p class="website__desc">The ultimate place for checking out some of the most exciting
+    cities within the USA.
+    <!-- Our guide provides up to date information on the good and the bad of each city that made it in our list. -->
+</p>
+<body class="header__pic">
+    <div>
+    <img id="header__image" src="./images/joris-beugels-L8bZAwmQK1M-unsplash(1).jpg"  width="100%" height="200px"   alt="">
+<div class="header__embeded__text">
+    
+</div>
+</div>
     <header class="main__header">
-        <h1 class="main__header__title">Hiker's guide to the US</h1>
+        
         <nav class="main__nav"></nav>
     </header>
     <div class="container">
         <section class="about">
-            <p class="website__desc">Hiker's guide is the ultimate place for checking out some of the most exciting
-                cities within the USA.
-                Our guide provides up to date information on the good and the bad of each city that made it in our list.
+            <p class="website__desc">
+                <!-- Our guide provides up to date information on the good and the bad of each city that made it in our list. -->
+            Recent Cities
             </p>
         </section>
 
@@ -27,8 +45,8 @@
                     <div class="miami__container">
                         <h2 class="miami__header">Miami</h2>
 
-                        <img src="./images/miami.jpg" alt="Picture of Miami" class="miami__img">
-                        <p class="miami__desc">Miami is nicknamed the "Capital of Latin America" and is the largest city
+                        <img src="./images/miami_cropped.jpg" width="1000px" height="300px" alt="Picture of Miami" class="miami__img">
+                        <p  class="miami__desc">Miami is nicknamed the "Capital of Latin America" and is the largest city
                             with a Cuban-American plurality. Greater Downtown Miami has one of the largest
                             concentrations of
                             international banks in the United States, and is home to many large national and
@@ -41,12 +59,13 @@
 
             </article>
 
+
             <article class="charleston">
                 <a href="">
                     <div class="charleston__container">
                         <h2 class="charleston__header">Charleston</h2>
 
-                        <img src="./images/charleston.jpg" alt="Picture of Charleston" class="charleston__img">
+                        <img src="./images/charleston cropped.jpg" width=1000px height="300px" alt="Picture of Charleston" class="charleston__img">
                         <p class="charleston__desc">Charleston was the fourth largest city in colonial America, and the
                             wealthiest! Charleston boasts the first public college, museum, and playhouse in the U.S.
                             The
@@ -67,7 +86,7 @@
                     <a href="">
                         <h2 class="columbus__header">Columbus</h2>
 
-                        <img src="./images/columbus.jpg" alt="Picture of Columbus" class="columbus__img">
+                        <img src="./images/columbus.jpg" width="1000px" height="300px" alt="Picture of Columbus" class="columbus__img">
                         <p class="columbus__desc">Columbus is a city in Ohio with a population of 878,553. Columbus is
                             in Franklin County and is one of the best places to live in Ohio. Living in Columbus offers
                             residents an urban suburban mix feel and most residents rent their homes. In Columbus there
@@ -86,7 +105,7 @@
                     <div class="san__francisco__container">
                         <h2 class="san__francisco__header">San Francisco</h2>
 
-                        <img src="./images/san_francisco.jpg" alt="San Francisco Header" class="san__francisco__img">
+                        <img src="./images/joonyeop-baek-1kf69eE7VR4-unsplash.jpg" width="1000px" height="300px" alt="San Francisco Header" class="san__francisco__img">
                         <p class="san__francisco__desc">For more than 150 years, San Francisco has been a magnet for
                             fortune-seekers, immigrants, artists, and poets. Guarded by the famous bridge spanning the
                             Golden Gate, the city by the bay is known for its diverse citizenry, Victorian architecture,
@@ -100,7 +119,7 @@
         </section>
         <section class="hashtags">
             <aside class="hash__list">
-                <ul class="hash__list__content">
+                <ul class="hash__list__content" style="list-style-type: none;" >
                     <li><a href="">#Restaurants </a></li>
                     <li><a href="">#Nightlife </a></li>
                     <li><a href="">#Bridge </a></li>
