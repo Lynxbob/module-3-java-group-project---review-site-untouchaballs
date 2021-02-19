@@ -3,44 +3,32 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>Hiker's guide to the US</title>
 
     <link rel="stylesheet" href="./review.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-  
-        body{
-            font-family: Oswald;
-        }
+ 
       </style>
 </head>
-
 <body>
-    <div class="header__container">
-    <div>
-    <header class="city__header">
-        <h1 class="city__title" th:text="${City.name}">Miami</h1>
-    </div>
-        <div class="header__home">
-        <h2>Home</h2>
-    </div>
-</div>
+
+    <header class="review__header">
+        <h1 class="review__title" th:text="${review.title}">Wynwood Walls</h1>
     </header>
 
     <div class="container">
         <main class="reviews">
-            <section class="review">
-                <th:block th:each="review:${City.reviews}">
-                    <div class="city__title__container">
-                <h2 class="review__title" th:text="${review.title}">Wynwood Walls</h2>
-            </div>
-            <div class="review__image_container">
-                <div class="review__iamge__div">
-                <img src="../static/images/1024px-boombox.jpg" width="1000px" height="625px" th:src="@{review.imageUrl}"
-                    alt="Picture of Attraction">
-                </div>
-                <p class="review__desc" th:text="${review.description}">Located in a neighborhood between the
+
+            <section class="review__section">
+                <img th:src="${review.imageUrl}" src="../static/images/Wynwood.jpg" alt="Picture of Attraction">
+                <p class="review__desc" th:text="${review.description}">
+                    Located in a neighborhood between the
+
                     design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists,
                     creatives and young innovators alike.
                     It's filled with beautiful art galleries with known artist from all over the world, and as visitors
@@ -48,8 +36,9 @@
                     experience.
                     You can find high end restaurants as well as food trucks with a variety of type of food.
                     Every second Saturday of the month, the neighborhood has an event called "Art Walk" where galleries
-                    are open until midnight and local artist setup shops in an open area, bazar alike. </p>
-                </th:block>
+                    are open until midnight and local artist setup shops in an open area, bazar alike.
+                </p>
+                <a th:href="'/categories/'+${review.category.name}"     href="./categories-page.html" class="">Back to <span th:text="${review.category.name}">Miami</span></a>
             </section>
             <div class="container">
                 <main class="reviews">

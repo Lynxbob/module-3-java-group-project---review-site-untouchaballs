@@ -1,16 +1,20 @@
 package org.wecancodeit.reviews;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
-public class City {
+public class Category {
     private String name;
-    private Collection<Review> reviews;
     private String imageUrl;
+    private Collection<String> reviews;
 
 
-    public City(String name, String imageUrl) {
+
+    public Category(String name, String imageUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
+        this.reviews = new ArrayList<>();
+
     }
 
 
@@ -18,7 +22,7 @@ public class City {
         return name;
     }
 
-    public Collection<Review> getReviews() {
+    public Collection<String> getReviews() {
         return reviews;
     }
 
@@ -26,8 +30,9 @@ public class City {
         return imageUrl;
     }
 
-    public void addToReviews(Review review) {
-        reviews.add(review);
+    public void addToReviews(String reviewName) {
+        reviews.add(reviewName);
+      
     }
 
 }
