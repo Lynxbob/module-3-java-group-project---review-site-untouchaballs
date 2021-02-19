@@ -6,7 +6,7 @@ import java.util.Collection;
 public class Category {
     private String name;
     private String imageUrl;
-    private Collection<Review> reviews;
+    private Collection<String> reviews;
 
 
 
@@ -22,16 +22,17 @@ public class Category {
         return name;
     }
 
+    public Collection<String> getReviews() {
+        return reviews;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
 
-    public Collection<Review> getReviews() {
-        return reviews;
-    }
-
-    public void addToReviews(Review review) {
-        reviews.add(review);
+    public void addToReviews(String reviewName) {
+        reviews.add(reviewName);
+      
     }
 
 }
