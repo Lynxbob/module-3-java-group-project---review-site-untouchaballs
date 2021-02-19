@@ -21,7 +21,7 @@
     <div class="review__container">
         <main class="reviews">
         <th:block th:each="review: ${category.reviews}">
-            <a href="./review-page.html" th:href="@{/categories-page/${review}}">
+            <a href="./review-page.html" th:href="@{ ${category.name} + '/' + ${review}}">
             <h3 th:text= "${review}">Wynwood Walls</h3>
             </a>
         </th:block>

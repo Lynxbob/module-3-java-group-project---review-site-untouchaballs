@@ -12,7 +12,7 @@ public class Review {
         this.description = description;
         this.imageUrl = imageUrl;
         this.category = category;
-        this.category.getReviews().add(this);
+        this.category.getReviews().add(this.title);
     }
 
     public String getTitle() {
