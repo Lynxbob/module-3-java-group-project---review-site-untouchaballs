@@ -37,7 +37,7 @@
             </div>
             <div class="review__image_container">
                 <div class="review__iamge__div">
-                <img src="../static/images/Wynwood.jpg"  th:src="@{review.imageUrl}"
+                <img src="../static/images/1024px-boombox.jpg" width="1000px" height="625px" th:src="@{review.imageUrl}"
                     alt="Picture of Attraction">
                 </div>
                 <p class="review__desc" th:text="${review.description}">Located in a neighborhood between the
@@ -51,8 +51,34 @@
                     are open until midnight and local artist setup shops in an open area, bazar alike. </p>
                 </th:block>
             </section>
+            <div class="container">
+                <main class="reviews">
+                    <section class="review">
+                        <th:block th:each="review:${City.reviews}">
+                            <div class="city__title__container">
+                        <h2 class="review__title" th:text="${review.title}">Lincoln Rd</h2>
+                    </div>
+                    <div class="review__image_container">
+                        <div class="review__iamge__div">
+                        <img src="../static/images/Lincoln Rd.jpg" width="1000px"  th:src="@{review.imageUrl}"
+                            alt="Picture of Attraction">
+                        </div>
+                        <p class="review__desc" th:text="${review.description}">Located in a neighborhood between the
+                            design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists,
+                            creatives and young innovators alike.
+                            It's filled with beautiful art galleries with known artist from all over the world, and as visitors
+                            walk through the streets of this lively neighborhood, murals decorate it's wall making it a unique
+                            experience.
+                            You can find high end restaurants as well as food trucks with a variety of type of food.
+                            Every second Saturday of the month, the neighborhood has an event called "Art Walk" where galleries
+                            are open until midnight and local artist setup shops in an open area, bazar alike. </p>
+                        </th:block>
+                    </section>
+                </main>
+            </div>
         </main>
     </div>
+
     </div>
 
 </body>
