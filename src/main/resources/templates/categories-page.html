@@ -14,6 +14,7 @@
 
   
     <body>
+    <a th:href="@{ '/' + ${review.category.name}}"     href="./index.html" class="">Back to <span th:text="${review.category.name}">Home Page</span></a>
     <header class="category__header">
         <h1 class="city__title" th:text="${category.name}">Miami</h1>
 
