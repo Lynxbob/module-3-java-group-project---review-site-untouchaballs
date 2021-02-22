@@ -1,46 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
-
-.main__header__title{
-border-bottom: 2px solid black;
-}
-.website__desc{
-    /* border-bottom: 2px solid black; */
-}
 
 
 
-.header__image{
-    max-width: 50%;
-    max-height: 50%;
-}
 
-.miami__desc{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    width: 1000px;
-}
-.charleston__desc{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    width: 1000px;
-}
-.columbus__desc{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    width: 1000px;
-}
-.san__francisco__desc{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    width: 1000px;
-}
-.hash__list__content{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');*/
+
+/*.main__header__title{*/
+/*border-bottom: 2px solid black;*/
+/*}*/
+/*.website__desc{*/
+/*    !* border-bottom: 2px solid black; *!*/
+/*}*/
+
+
+
+/*.header__image{*/
+/*    max-width: 50%;*/
+/*    max-height: 50%;*/
+/*}*/
+
+/*.miami__desc{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: start;*/
+/*    width: 1000px;*/
+/*}*/
+/*.charleston__desc{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: start;*/
+/*    width: 1000px;*/
+/*}*/
+/*.columbus__desc{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: start;*/
+/*    width: 1000px;*/
+/*}*/
+/*.san__francisco__desc{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: start;*/
+/*    width: 1000px;*/
+/*}*/
+/*.hash__list__content{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: center;*/
+/*    */
+/*}*/

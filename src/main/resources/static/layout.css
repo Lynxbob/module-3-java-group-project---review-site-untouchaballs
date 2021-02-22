@@ -1,6 +1,140 @@
-/* .header__pic{
+body {background-color: rgb(211, 211, 248);}
+
+
+
+#main__title{
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 100px;
-} */
+    margin-top: 7px;
+    border-bottom: 2px solid black;
+}
+
+#website__description{
+    margin-top: -40px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 25px;
+    margin-bottom: 20px;
+}
+
+.header__image{
+    display: flex;
+    justify-content: center;
+}
+
+.second__main__title{
+    display: flex;
+    justify-content: center;
+}
+
+.miami {
+    height: 500px;
+    background-color:rgb(141, 150, 155);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.miami__header{
+    display: flex;
+    justify-content: center;
+}
+
+.miami__img{
+    display: flex;
+    justify-content: center;
+}
+
+.charleston {
+    height: 600px;
+    background-color:rgb(141, 150, 155);
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.charleston__header{
+    display: flex;
+    justify-content: center;
+}
+
+.charleston__img{
+    display: flex;
+    justify-content: center;
+}
+
+.columbus {
+    height: 400px;
+    background-color:rgb(141, 150, 155);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.columbus__header{
+    display: flex;
+    justify-content: center;
+}
+
+.columbus__img{
+    display: flex;
+    justify-content: center;
+}
+
+
+.san__francisco {
+    height: 500px;
+    background-color:rgb(141, 150, 155);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+.san__francisco__header{
+    display: flex;
+    justify-content: center;
+}
+
+.san__francisco__img{
+    display: flex;
+    justify-content: center;
+}
+
+.hashtags {
+    height: 200px;
+    background-color:#F5E4E6;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px #C9C9C9;
+    border-radius: 7px;
+    padding: 7px;
+}
+
+#hashtags__title{
+    display: flex;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+.inlined {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.all_hashtags {
+    margin:5px;
+    font-size: 18px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+}
+
+
