@@ -17,7 +17,8 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Category miami = new Category("Miami", "");
+        Category miami = new Category("Miami", "images/miami_cropped.jpg");
+        Category columbus = new Category("Columbus", "images/columbus.jpg");
         miami.addToReviews("Wynwood Walls");
         miami.addToReviews("Lincoln Rd");
         miami.addToReviews("Brickell Area");
@@ -33,6 +34,7 @@ public class Populator implements CommandLineRunner {
                 "                    are open until midnight and local artist setup shops in an open area, bazar alike.", "/images/Brickell.jpg", miami);
 
         categoryStorage.saveCategory(miami);
+        categoryStorage.saveCategory(columbus);
         reviewStorage.saveReview(review);
 
 

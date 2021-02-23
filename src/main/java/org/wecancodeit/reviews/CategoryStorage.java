@@ -21,6 +21,10 @@ public class CategoryStorage {
 
     }
 
+    public Map<String, Category> getCategories() {
+        return categories;
+    }
+
     public Category retrieveCategoryByTitle(String title) {
         return categories.get(title);
     }

@@ -28,48 +28,19 @@
     <h1>Recent Cities</h1>
 </div>
 
-<div class="miami">
-    <a href="./categories-page.html">
-        <h2 class="miami__header">Miami
+<th:block th:each="category: ${categories.getCategories().values()}">
+<div class="category">
+    <a th:href="@{'/' + ${category.name}}" href="./categories-page.html">
+        <h2 class="category__header" th:text="${category.name}">Miami
         </h2>
-        <div class="miami__img">
-            <img id="miami__img" src="../static/images/miami_cropped.jpg" width="1000px" height="350px" alt="Picture of Miami">
+        <div class="category__img">
+            <img id="category__img" src="../static/images/miami_cropped.jpg" th:src="@{'/' + ${category.imageUrl}}" width="1000px" height="350px" alt="Picture of City">
         </div>
     </a>
 </div>
+</th:block>
 
 
-<div class="charleston">
-    <a href="">
-        <h2 class="charleston__header">Charleston
-        </h2>
-        <div class="charleston__img">
-            <img src="../static/images/charleston_skyline.jpg" width=1000px height="450px" alt="Picture of Charleston">
-        </div>
-    </a>
-</div>
-
-
-<div class="columbus">
-    <a href="">
-        <h2 class="columbus__header">Columbus
-        </h2>
-        <div class="columbus__img">
-            <img src="../static/images/columbus.jpg" width="1000px" height="300px" alt="Picture of Columbus">
-        </div>
-    </a>
-</div>
-
-
-<div class="san__francisco">
-    <a href="">
-        <h2 class="san__francisco__header">San Francisco
-        </h2>
-        <div class="san__francisco__img">
-            <img src="../static/images/joonyeop-baek-1kf69eE7VR4-unsplash.jpg" width="1000px" height="400px" alt="San Francisco Header" class="san__francisco__img">
-        </div>
-    </a>
-</div>
 
 
 <div class="hashtags" >
