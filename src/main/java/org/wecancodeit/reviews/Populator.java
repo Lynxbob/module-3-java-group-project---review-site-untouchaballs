@@ -19,9 +19,9 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Category miami = new Category("Miami", "images/miami_cropped.jpg");
         Category columbus = new Category("Columbus", "images/columbus.jpg");
-        miami.addToReviews("Wynwood Walls");
-        miami.addToReviews("Lincoln Rd");
-        miami.addToReviews("Brickell Area");
+//        miami.addToReviews("Wynwood Walls");
+//        miami.addToReviews("Lincoln Rd");
+//        miami.addToReviews("Brickell Area");
 
         Review review = new Review("Wynwood Walls", "Located in a neighborhood between the\n" +
                 "                    design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists,\n" +
