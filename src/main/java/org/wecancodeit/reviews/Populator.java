@@ -30,7 +30,7 @@ public class Populator implements CommandLineRunner {
                 "                    experience.\n" +
                 "                    You can find high end restaurants as well as food trucks with a variety of type of food.\n" +
                 "                    Every second Saturday of the month, the neighborhood has an event called \"Art Walk\" where galleries\n" +
-                "                    are open until midnight and local artist setup shops in an open area, bazar alike.", "/images/Wynwood.jpg", miami);
+                "                    are open until midnight and local artist setup shops in an open area, bazar alike.", "/images/Brickell.jpg", miami);
 
         categoryStorage.saveCategory(miami);
         reviewStorage.saveReview(review);

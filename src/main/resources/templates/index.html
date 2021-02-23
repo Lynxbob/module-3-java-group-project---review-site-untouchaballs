@@ -1,14 +1,14 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-<html lang="en">
 
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiker's guide to the US</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="../static/css/style.css" >
+    <link rel="stylesheet" href="../static/css/layout.css" th:href="@{css/layout.css}" >
 </head>
 
 <header>
@@ -19,7 +19,7 @@
     </h3>
 
     <div class="header__image">
-        <img src="./images/1024px-boombox.jpg" width="1100px" height="500px" alt="">
+        <img src="../static/images/1024px-boombox.jpg" width="1100px" height="500px" alt="">
     </div>
 </header>
 
@@ -33,7 +33,7 @@
         <h2 class="miami__header">Miami
         </h2>
         <div class="miami__img">
-            <img id="miami__img" src="./images/miami_cropped.jpg" width="1000px" height="350px" alt="Picture of Miami">
+            <img id="miami__img" src="../static/images/miami_cropped.jpg" width="1000px" height="350px" alt="Picture of Miami">
         </div>
     </a>
 </div>
@@ -44,7 +44,7 @@
         <h2 class="charleston__header">Charleston
         </h2>
         <div class="charleston__img">
-            <img src="./images/charleston_skyline.jpg" width=1000px height="450px" alt="Picture of Charleston">
+            <img src="../static/images/charleston_skyline.jpg" width=1000px height="450px" alt="Picture of Charleston">
         </div>
     </a>
 </div>
@@ -55,7 +55,7 @@
         <h2 class="columbus__header">Columbus
         </h2>
         <div class="columbus__img">
-            <img src="./images/columbus.jpg" width="1000px" height="300px" alt="Picture of Columbus">
+            <img src="../static/images/columbus.jpg" width="1000px" height="300px" alt="Picture of Columbus">
         </div>
     </a>
 </div>
@@ -66,7 +66,7 @@
         <h2 class="san__francisco__header">San Francisco
         </h2>
         <div class="san__francisco__img">
-            <img src="./images/joonyeop-baek-1kf69eE7VR4-unsplash.jpg" width="1000px" height="400px" alt="San Francisco Header" class="san__francisco__img">
+            <img src="../static/images/joonyeop-baek-1kf69eE7VR4-unsplash.jpg" width="1000px" height="400px" alt="San Francisco Header" class="san__francisco__img">
         </div>
     </a>
 </div>
