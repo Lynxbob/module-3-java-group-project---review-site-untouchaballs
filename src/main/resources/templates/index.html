@@ -28,8 +28,10 @@
     <h1>Recent Cities</h1>
 </div>
 
-<th:block th:each="category: ${categories.getCategories().values()}">
+<th:block th:each="category: ${categories.getAllCategories()}">
 <div class="category">
+
+    <!--/*@thymesVar id="name" type="String"*/-->
     <a th:href="@{'/' + ${category.name}}" href="./categories-page.html">
         <h2 class="category__header" th:text="${category.name}">Miami
         </h2>

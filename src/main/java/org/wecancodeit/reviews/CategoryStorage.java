@@ -4,28 +4,39 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 
 @Service
 public class CategoryStorage {
-    private Map<String, Category> categories;
+    private CategoryRepository categoryRepo;
 
 
-    public CategoryStorage(){
-        categories = new HashMap<>();
+    public CategoryStorage(CategoryRepository categoryRepo){
+        this.categoryRepo = categoryRepo;
 
     }
 
     public void saveCategory(Category category){
-        categories.put(category.getName(), category);
+        categoryRepo.save(category);
 
     }
 
-    public Map<String, Category> getCategories() {
-        return categories;
+    public Iterable<Category> getAllCategories() {
+        return categoryRepo.findAll();
     }
 
-    public Category retrieveCategoryByTitle(String title) {
-        return categories.get(title);
+    public Category retrieveCategoryByName(String name) {
+        Category retrievedCategory;
+        Optional<Category> categoryOptional = categoryRepo.findByName(name);
+        if(!categoryOptional.isEmpty()) {
+            retrievedCategory = categoryOptional.get();
+        }
+        else {
+            retrievedCategory = null;
+        }
+
+        return retrievedCategory;
+
     }
 }

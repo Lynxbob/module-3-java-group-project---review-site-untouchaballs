@@ -18,7 +18,7 @@ public class CategoryController {
     @RequestMapping("/{categoryTitle}")
     public String displayReviewPage(@PathVariable String categoryTitle, Model model) {
 
-        Category category = categoryStorage.retrieveCategoryByTitle(categoryTitle);
+        Category category = categoryStorage.retrieveCategoryByName(categoryTitle);
 
 
 
