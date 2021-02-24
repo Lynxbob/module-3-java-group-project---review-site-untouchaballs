@@ -20,6 +20,7 @@ public class ReviewPageController {
 
         Review review = reviewStorage.retrieveReviewByTitle(reviewTitle);
 
+
         model.addAttribute("review", review);
         return "review-page";
 
