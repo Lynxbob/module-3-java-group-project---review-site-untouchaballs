@@ -23,7 +23,7 @@ public class Populator implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Category miami = new Category("Miami", "images/miami_cropped.jpg");
         Category columbus = new Category("Columbus", "images/columbus.jpg");
-        Category charleston = new Category("Charleston","images/charleston_syline.jpg");
+        Category charleston = new Category("Charleston","images/charleston_skyline.jpg");
         Category sanFrancisco = new Category("San Francisco","images/san_francisco.jpg");
 
 

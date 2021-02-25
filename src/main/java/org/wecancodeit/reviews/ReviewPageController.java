@@ -15,10 +15,14 @@ public class ReviewPageController {
     }
 
 
-    @RequestMapping("/{categoryTitle}/{reviewTitle}")
+    @RequestMapping("/cities/{categoryTitle}/{reviewTitle}")
     public String displayReviewPage(@PathVariable String categoryTitle, @PathVariable String reviewTitle, Model model) {
 
         Review review = reviewStorage.retrieveReviewByTitle(reviewTitle);
+        if(review == null) {
+            return "error";
+        }
+
 
 
         model.addAttribute("review", review);

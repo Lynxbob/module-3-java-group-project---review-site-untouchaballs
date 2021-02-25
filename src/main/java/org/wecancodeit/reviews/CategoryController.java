@@ -15,10 +15,14 @@ public class CategoryController {
         this.categoryStorage = categoryStorage;
     }
 
-    @RequestMapping("/{categoryTitle}")
+    @RequestMapping("/cities/{categoryTitle}")
     public String displayReviewPage(@PathVariable String categoryTitle, Model model) {
 
         Category category = categoryStorage.retrieveCategoryByName(categoryTitle);
+
+        if(category == null) {
+            return "error";
+        }
 
 
 

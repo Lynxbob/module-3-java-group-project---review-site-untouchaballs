@@ -9,7 +9,7 @@
 
     <title>Hiker's guide to the US</title>
 
-    <link rel="stylesheet" href="../static/css/review.css">
+    <link rel="stylesheet" href="/css/review.css">
 </head>
 <body>
 <a th:href="'/'"  href="./index.html" class="">Back to <span>Home Page</span></a>
@@ -22,7 +22,7 @@
         <main class="reviews">
 
             <section class="review__section">
-                <img th:src="${review.imageUrl}" src="../static/images/Wynwood Walls2.jpg" width="1000px" height="625px" alt="Picture of Attraction">
+                <img th:src="@{${review.imageUrl}}" src="../static/images/Wynwood Walls2.jpg" width="1000px" height="625px" alt="Picture of Attraction">
                 <p class="review__desc" th:text="${review.description}">
                     Located in a neighborhood between the
 
@@ -35,7 +35,7 @@
                     Every second Saturday of the month, the neighborhood has an event called "Art Walk" where galleries
                     are open until midnight and local artist setup shops in an open area, bazar alike.
                 </p>
-                <a th:href="@{ '/' + ${review.category.name}}"     href="./categories-page.html" class="">Back to <span th:text="${review.category.name}">Miami</span></a>
+                <a th:href="@{ '/cities/' + ${review.category.name}}"     href="./categories-page.html" class="">Back to <span th:text="${review.category.name}">Miami</span></a>
             </section>
         </main>
     </div>
