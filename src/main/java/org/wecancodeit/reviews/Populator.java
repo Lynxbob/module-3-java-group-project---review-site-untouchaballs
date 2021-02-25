@@ -47,9 +47,13 @@ public class Populator implements CommandLineRunner {
         Review chinaTown = new Review("China Town", ("When you’re deciding on places to visit in San Francisco, don’t forego the 24 lively blocks that comprise Chinatown toward the northern end of the city. Enter through “Dragon’s Gate” on Grant Avenue and walk up into these bustling lanes; they’re packed with tourist-friendly shops, colorful markets, authentic restaurants, fragrant tea shops, and small pagodas and temples. Don’t miss the Golden Gate Cookie Factory on Ross Alley, where every day, two women hand make 20,000 fortune cookies.\n"),"/images/China Town.jpg" ,sanFrancisco);
 
         Review fisherManWharf = new Review("Fisher Man Wharf",("You haven’t gone San Francisco sightseeing if you haven’t seen Fisherman’s Wharf and its festive Pier 39, San Francisco’s most visited destination. Jutting out over the bay, the pier’s carnival-like collection of attractions, food vendors, shops, and live entertainment makes for a very cheerful way to spend a day. Add spectacular ocean views, the fascinating Aquarium of the Bay, plus a hilarious colony of California sea lions on the marina’s western docks, and you’ve got an experience you won’t soon forget.\n" +
-                "Step off the pier into Fisherman’s Wharf to see talented street buskers, stands selling hot clam chowder, and quirky attractions like the Musee Mecanique, Madame Tussauds wax museum, Ripley’s Believe It or Not!, and the San Francisco Dungeon.\n"), "images/wharf.jpg", sanFrancisco);
+                "Step off the pier into Fisherman’s Wharf to see talented street buskers, stands selling hot clam chowder, and quirky attractions like the Musee Mecanique, Madame Tussauds wax museum, Ripley’s Believe It or Not!, and the San Francisco Dungeon.\n"), "/images/wharf.jpg", sanFrancisco);
 
+        Review fortSumter = new Review("Fort Sumter", ("Fort Sumter was a very interesting visit. It takes a dive into history where you visit a naval fort for the war of 1812. There is a ferry ride to the fort and its beautiful, and its very interesting and educational."), "/images/fortsumter.jpg", charleston);
 
+        Review arthurRavenelBridge = new Review("Arthur Ravenel Jr. Bridge", ("The scenery over the bridge gives you a clear view of the sea and its very beautiful all around. Perfect place to take a hike or to bike over, to make for an interesting outdoor activity."), "/images/arthur-ravenel-jr-bridge.gif", charleston);
+
+        Review morrisIslandLighthouse = new Review("Morris Island Lighthouse" , "Morris Island Lighthouse is in charleston county on Morris island a bit away from the main city. The Lighthouse is off the shore and gives you a great view of the ocean, and is an interesting visit. The only con is the inconvenience of visiting the lighthouse.", "/images/morris-island-lighthouse.jpg", charleston);
 
 
 
@@ -67,6 +71,10 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(goldenGateBridge);
         reviewRepo.save(chinaTown);
         reviewRepo.save(fisherManWharf);
+
+        reviewRepo.save(fortSumter);
+        reviewRepo.save(arthurRavenelBridge);
+        reviewRepo.save(morrisIslandLighthouse);
 
 
 
