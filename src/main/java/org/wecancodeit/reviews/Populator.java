@@ -41,6 +41,20 @@ public class Populator implements CommandLineRunner {
                 "In Brickell there are a lot of bars, restaurants, coffee shops, and parks. Many young professionals live in Brickell and the area continues to grow its population. \n" +
                 "It is a safe area for those that enjoy jogging at any time or exercising at its many recreational parks. "),"/images/Brickell.jpg", miami);
 
+        Review goldenGateBridge = new Review("Golden Gate Bridge", ("Isn’t just one of the most iconic San Francisco attractions—it’s one of the most iconic attractions in the world. In the U.S., the only structure more famous is the Statue of Liberty. So it’d be a crime to visit San Francisco and not make your way across—or at least get a good look at—this stunning bridge, which is truly a sight to behold.\n" +
+                "Spanning 1.7 miles from scenic Fort Point to Marin’s headlands, 120,000 cars drive across the Golden Gate Bridge daily. When it debuted in 1937, it cost $0.50 to cross this magnificent landmark by automobile. The toll has since changed (it was $7.75 at publication time) but the awe-inspiring architecture has not. Experience it for free—and see the bay in all its splendor—by walking or biking across.\n"), "/images/Golden Gate Bridge.jpg", sanFrancisco);
+
+        Review chinaTown = new Review("China Town", ("When you’re deciding on places to visit in San Francisco, don’t forego the 24 lively blocks that comprise Chinatown toward the northern end of the city. Enter through “Dragon’s Gate” on Grant Avenue and walk up into these bustling lanes; they’re packed with tourist-friendly shops, colorful markets, authentic restaurants, fragrant tea shops, and small pagodas and temples. Don’t miss the Golden Gate Cookie Factory on Ross Alley, where every day, two women hand make 20,000 fortune cookies.\n"),"/images/China Town.jpg" ,sanFrancisco);
+
+        Review fisherManWharf = new Review("Fisher Man Wharf",("You haven’t gone San Francisco sightseeing if you haven’t seen Fisherman’s Wharf and its festive Pier 39, San Francisco’s most visited destination. Jutting out over the bay, the pier’s carnival-like collection of attractions, food vendors, shops, and live entertainment makes for a very cheerful way to spend a day. Add spectacular ocean views, the fascinating Aquarium of the Bay, plus a hilarious colony of California sea lions on the marina’s western docks, and you’ve got an experience you won’t soon forget.\n" +
+                "Step off the pier into Fisherman’s Wharf to see talented street buskers, stands selling hot clam chowder, and quirky attractions like the Musee Mecanique, Madame Tussauds wax museum, Ripley’s Believe It or Not!, and the San Francisco Dungeon.\n"), "images/wharf.jpg", sanFrancisco);
+
+
+
+
+
+
+
         categoryRepo.save(miami);
         categoryRepo.save(columbus);
         categoryRepo.save(charleston);
@@ -49,6 +63,10 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(wynwoodWalls);
         reviewRepo.save(lincolnRoad);
         reviewRepo.save(brickellArea);
+
+        reviewRepo.save(goldenGateBridge);
+        reviewRepo.save(chinaTown);
+        reviewRepo.save(fisherManWharf);
 
 
 
