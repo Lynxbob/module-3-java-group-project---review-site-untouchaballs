@@ -22,7 +22,7 @@ public class HashtagStorage {
         return hashtagRepo.findAll();
     }
 
-    public Hashtag retrieveReviewByName(String name) {
+    public Hashtag retrieveHashtagByName(String name) {
         Hashtag retrievedHashtag;
         Optional<Hashtag> hashtagOptional = hashtagRepo.findByName(name);
         if(!hashtagOptional.isEmpty()) {

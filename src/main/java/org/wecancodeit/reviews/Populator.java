@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import org.wecancodeit.reviews.*;
 
+import java.awt.image.AreaAveragingScaleFilter;
+import java.util.ArrayList;
+
 @Component
 public class Populator implements CommandLineRunner {
 
@@ -13,10 +16,13 @@ public class Populator implements CommandLineRunner {
     private CategoryRepository categoryRepo;
     @Autowired
     private ReviewRepository reviewRepo;
+    @Autowired
+    private HashtagRepository hashtagRepo;
 
-    public Populator(CategoryRepository categoryRepo, ReviewRepository reviewRepo) {
+    public Populator(CategoryRepository categoryRepo, ReviewRepository reviewRepo, HashtagRepository hashtagRepo) {
         this.categoryRepo = categoryRepo;
         this.reviewRepo = reviewRepo;
+        this.hashtagRepo = hashtagRepo;
     }
 
     @Override
@@ -72,6 +78,9 @@ public class Populator implements CommandLineRunner {
                 "They have a cute little bar that you could get a beer or a mixed cocktail and walk through the market, it’s not very big but it is just the perfect size for a casual lunch as they have seating upstairs and outside picnic tables."),"/image/north-marketjpg.jpg",columbus);
 
 
+
+
+
         categoryRepo.save(miami);
         categoryRepo.save(columbus);
         categoryRepo.save(charleston);
@@ -93,5 +102,11 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(cosi);
         reviewRepo.save(northMarket);
 
+
+        Hashtag hashtag = new Hashtag("Nightlife");
+        hashtag.addReview(wynwoodWalls);
+        hashtag.addReview(chinaTown);
+
+        hashtagRepo.save(hashtag);
     }
 }

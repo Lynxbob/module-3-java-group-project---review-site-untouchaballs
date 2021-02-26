@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiker's guide to the US</title>
+</head>
+<body>
+<a th:href="'/'"  href="./index.html" class="">Back to <span>Home Page</span></a>
+
+<header class="hashtag__header">
+    <h1 class="hashtag__title" th:text="${hashtag.hashtag} + ${hashtag.name}">Wynwood Walls</h1>
+</header>
+
+<div class="hashtag__container">
+    <main class="hashtag__reviews">
+        <th:block th:each="review: ${hashtag.getReviews()}">
+            <a href="./review-page.html" th:href="@{ '/cities/' + ${review.category.name} + '/' + ${review.title}}">
+                <h3 th:text= "${review.category.name} + ': ' + ${review.title}">Wynwood Walls</h3>
+            </a>
+        </th:block>
+    </main>
+</div>
+
+</body>
+
+</html>

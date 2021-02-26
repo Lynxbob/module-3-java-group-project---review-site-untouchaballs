@@ -31,7 +31,11 @@ public class Review {
         this.description = description;
         this.imageUrl = imageUrl;
         this.category = category;
-        hashtags = new ArrayList<>();
+        this.hashtags = new ArrayList<>();
+    }
+
+    public void addHashtag(Hashtag hashtag) {
+        hashtags.add(hashtag);
     }
 
     public String getTitle() {

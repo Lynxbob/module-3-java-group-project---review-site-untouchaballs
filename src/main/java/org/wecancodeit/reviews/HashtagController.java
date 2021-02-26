@@ -18,5 +18,10 @@ public class HashtagController {
     @RequestMapping("/hashtags/{hashtagName}")
     public String displayHashtagReviews(@PathVariable String hashtagName, Model model) {
 
+        Hashtag hashtag = hashtagStorage.retrieveHashtagByName(hashtagName);
+        model.addAttribute("hashtag", hashtag);
+
+
+        return "hashtag-page";
     }
 }

@@ -1,10 +1,7 @@
 package org.wecancodeit.reviews;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -15,6 +12,7 @@ public class Hashtag {
     @GeneratedValue
     private long id;
     private String name;
+    private String hashtag;
 
     @ManyToMany
     private Collection<Review> reviews;
@@ -25,13 +23,23 @@ public class Hashtag {
 
     public Hashtag(String name) {
         this.name = name;
-        this.reviews = new ArrayList<Review>();
+        this.reviews = new ArrayList<>();
+        this.hashtag = "#";
+    }
+
+
+    public void addReview(Review review) {
+        reviews.add(review);
     }
 
     protected Hashtag() {}
 
     public long getId() {
         return id;
+    }
+
+    public String getHashtag() {
+        return hashtag;
     }
 
     public String getName() {

@@ -6,13 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiker's guide to the US</title>
-<<<<<<< Updated upstream
     <link rel="stylesheet" href="/css/style.css"  >
     <link rel="stylesheet" href="/css/layout.css"  >
-=======
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/layout.css">
->>>>>>> Stashed changes
+
 </head>
 
 <header>
@@ -83,7 +79,7 @@
     <aside class="hash__list">
         <ul class="hash__list__content" style="list-style-type: none;">
             <th:block th:each="hashtag: ${hashtags.getAllHashtags()}">
-                <li><a th:text="${hashtag.name} "href="">#Restaurants </a></li>
+                <li><a th:text="${hashtag.hashtag} + ${hashtag.name} " th:href="'/hashtags/' + ${hashtag.name}">#Restaurants </a></li>
 
             </th:block>
         </ul>
