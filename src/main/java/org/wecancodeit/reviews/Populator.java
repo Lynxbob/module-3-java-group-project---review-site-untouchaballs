@@ -30,7 +30,7 @@ public class Populator implements CommandLineRunner {
         Review wynwoodWalls = new Review("Wynwood Walls", ("Located in a neighborhood between the design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists, creatives and young innovators alike. \n" +
                 "It's filled with beautiful art galleries with known artist from all over the world, and as visitors walk through the streets of this lively neighborhood, murals decorate it's wall making it a unique experience.\n" +
                 "You can find high end restaurants as well as food trucks with a variety of type of food. \n" +
-                "Every second Saturday of the month, the neighborhood has an event called \"Art Walk\" where galleries are open until midnight and local artist setup shops in an open area, bazaar alike. "), "/images/Brickell.jpg", miami);
+                "Every second Saturday of the month, the neighborhood has an event called \"Art Walk\" where galleries are open until midnight and local artist setup shops in an open area, bazaar alike. "), "/images/Wynwood.jpg", miami);
 
         Review lincolnRoad = new Review("Lincoln Rd",("Lincoln Rd is a ten-block mecca of shopping dining and entertainment that is constantly filled with a mix of tourists and locals which creates an ultimately energy for people-watching.\n" +
                 "During the day is the perfect place to walk down the road with family and friends. The outdoor sitting provided by restaurants gives you that unique experience of enjoying a nice meal, while watching people from all over the world walk by.\n" +

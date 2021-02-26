@@ -3,6 +3,8 @@ package org.wecancodeit.reviews;
 
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 @Entity
 public class Review {
@@ -14,6 +16,9 @@ public class Review {
     @Column(length=1000)
     private String description;
     private String imageUrl;
+
+    @ManyToMany(mappedBy = "reviews")
+    private Collection<Hashtag> hashtags;
     @ManyToOne
     private Category category;
 
@@ -26,6 +31,7 @@ public class Review {
         this.description = description;
         this.imageUrl = imageUrl;
         this.category = category;
+        hashtags = new ArrayList<>();
     }
 
     public String getTitle() {
