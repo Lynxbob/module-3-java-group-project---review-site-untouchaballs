@@ -55,8 +55,21 @@ public class Populator implements CommandLineRunner {
 
         Review morrisIslandLighthouse = new Review("Morris Island Lighthouse" , "Morris Island Lighthouse is in charleston county on Morris island a bit away from the main city. The Lighthouse is off the shore and gives you a great view of the ocean, and is an interesting visit. The only con is the inconvenience of visiting the lighthouse.", "/images/morris-island-lighthouse.jpg", charleston);
 
+        Review franklinPark = new Review ("Franklin Park Conservatory and Botanical Gardens",("Franklin Park Conservatory and Botanical Gardens is a botanical garden and conservatory. " +
+                "It is open daily and an admission fee is charged. There are many world class custom glss exhibits interspersed throughout the collections. " +
+                "The structure on the inside is really great, the location is nice, and the decor is impressive and modern. " +
+                "Perfect location to spend the day with the family exploring around, as well as perfect venue for weddings and special occasions."),"/image/conservatory.jpg",columbus);
+
+        Review cosi = new Review("Center of Science and Industry (COSI)",("Officially the Center of Science and Industry, is a science museum and research center.\n" +
+                "Great museum for the community and the kids in general. The museum is massive and full of interesting exhibits. \n" +
+                "COSI offers several exhibits throughtout the year to bring an interesting topic for kids and its visitors to learn about.\n" +
+                "When you go, plan on learning a lot of new things, having a fun time, and sleeping really well that night. There’s a lot of walking involved!"),"/image/cosi-front.jpg",columbus);
 
 
+        Review northMarket = new Review("North Market",("North Market is a 145-year-old vibrant public market made up of Ohio’s best independent merchants, farmers, and makers.\n" +
+                "This is a nice little farmers market very close to the convention center and they do have parking you can get your parking validated so you only pay a dollar if you purchase something. \n" +
+                "Great place for lunch as there are several choices from Indian Chinese, Italian, Vietnamese, and others.\n" +
+                "They have a cute little bar that you could get a beer or a mixed cocktail and walk through the market, it’s not very big but it is just the perfect size for a casual lunch as they have seating upstairs and outside picnic tables."),"/image/north-marketjpg.jpg",columbus);
 
 
         categoryRepo.save(miami);
@@ -76,8 +89,9 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(arthurRavenelBridge);
         reviewRepo.save(morrisIslandLighthouse);
 
-
-
+        reviewRepo.save(franklinPark);
+        reviewRepo.save(cosi);
+        reviewRepo.save(northMarket);
 
     }
 }
