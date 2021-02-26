@@ -64,18 +64,18 @@ public class Populator implements CommandLineRunner {
         Review franklinPark = new Review ("Franklin Park Conservatory and Botanical Gardens",("Franklin Park Conservatory and Botanical Gardens is a botanical garden and conservatory. " +
                 "It is open daily and an admission fee is charged. There are many world class custom glss exhibits interspersed throughout the collections. " +
                 "The structure on the inside is really great, the location is nice, and the decor is impressive and modern. " +
-                "Perfect location to spend the day with the family exploring around, as well as perfect venue for weddings and special occasions."),"/image/conservatory.jpg",columbus);
+                "Perfect location to spend the day with the family exploring around, as well as perfect venue for weddings and special occasions."),"/images/conservatory.jpg",columbus);
 
         Review cosi = new Review("Center of Science and Industry (COSI)",("Officially the Center of Science and Industry, is a science museum and research center.\n" +
                 "Great museum for the community and the kids in general. The museum is massive and full of interesting exhibits. \n" +
                 "COSI offers several exhibits throughtout the year to bring an interesting topic for kids and its visitors to learn about.\n" +
-                "When you go, plan on learning a lot of new things, having a fun time, and sleeping really well that night. There’s a lot of walking involved!"),"/image/cosi-front.jpg",columbus);
+                "When you go, plan on learning a lot of new things, having a fun time, and sleeping really well that night. There’s a lot of walking involved!"),"/images/cosi-front.png",columbus);
 
 
         Review northMarket = new Review("North Market",("North Market is a 145-year-old vibrant public market made up of Ohio’s best independent merchants, farmers, and makers.\n" +
                 "This is a nice little farmers market very close to the convention center and they do have parking you can get your parking validated so you only pay a dollar if you purchase something. \n" +
                 "Great place for lunch as there are several choices from Indian Chinese, Italian, Vietnamese, and others.\n" +
-                "They have a cute little bar that you could get a beer or a mixed cocktail and walk through the market, it’s not very big but it is just the perfect size for a casual lunch as they have seating upstairs and outside picnic tables."),"/image/north-marketjpg.jpg",columbus);
+                "They have a cute little bar that you could get a beer or a mixed cocktail and walk through the market, it’s not very big but it is just the perfect size for a casual lunch as they have seating upstairs and outside picnic tables."),"/images/north-marketjpg.jpg",columbus);
 
 
 
@@ -103,10 +103,48 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(northMarket);
 
 
-        Hashtag hashtag = new Hashtag("Nightlife");
-        hashtag.addReview(wynwoodWalls);
-        hashtag.addReview(chinaTown);
+        Hashtag nightLife = new Hashtag("Nightlife");
+        nightLife.addReview(wynwoodWalls);
+        nightLife.addReview(chinaTown);
+        nightLife.addReview(lincolnRoad);
+        nightLife.addReview(brickellArea);
 
-        hashtagRepo.save(hashtag);
+        Hashtag restaurants = new Hashtag("Restaurants");
+        restaurants.addReview(fisherManWharf);
+        restaurants.addReview(chinaTown);
+        restaurants.addReview(wynwoodWalls);
+        restaurants.addReview(brickellArea);
+        restaurants.addReview(lincolnRoad);
+        restaurants.addReview(northMarket);
+
+
+        Hashtag bridge = new Hashtag("Bridge");
+        bridge.addReview(arthurRavenelBridge);
+        bridge.addReview(goldenGateBridge);
+
+        Hashtag shopping = new Hashtag("Shopping");
+        shopping.addReview(fisherManWharf);
+        shopping.addReview(chinaTown);
+        shopping.addReview(wynwoodWalls);
+        shopping.addReview(brickellArea);
+        shopping.addReview(lincolnRoad);
+        shopping.addReview(northMarket);
+
+        Hashtag culture = new Hashtag("Culture");
+
+        culture.addReview(cosi);
+        culture.addReview(wynwoodWalls);
+        culture.addReview(chinaTown);
+        culture.addReview(goldenGateBridge);
+        culture.addReview(fortSumter);
+        culture.addReview(morrisIslandLighthouse);
+
+
+
+        hashtagRepo.save(culture);
+        hashtagRepo.save(bridge);
+        hashtagRepo.save(shopping);
+        hashtagRepo.save(nightLife);
+        hashtagRepo.save(restaurants);
     }
 }
