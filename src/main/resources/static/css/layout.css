@@ -1,4 +1,4 @@
-body {background-color: rgb(211, 211, 248);}
+body {background-color: rgb(233, 233, 241);}
 
 
 
@@ -25,7 +25,41 @@ body {background-color: rgb(211, 211, 248);}
 .second__main__title{
     display: flex;
     justify-content: center;
+    
 }
+
+h2{
+    display: flex;
+    justify-content: center;
+}
+
+.category__img{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .miami {
     height: 500px;
