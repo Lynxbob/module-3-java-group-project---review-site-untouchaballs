@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hiker's Guide To the US</title>
+</head>
+
+<body>
+
+    <header class="add__review__header">
+        <h1 class="add__review__text">Add new Review</h1>
+    </header>
+
+    <div class="add__review__container">
+        <main class="add__review__main">
+            <form action="/add-review/success/" method="post">
+                <label for="cityList">Choose a City:</label>
+                <select name="city" id="cityList">
+                    <th:block th:each="category:${categories}">
+                        <option th:value="${category.id}" th:text="${category.name}">Miami</option>
+                    </th:block>
+                </select>
+
+                <label for="review__name">Review Name:</label>
+                <input type="text" id="review__name">
+
+                <label for="review__desc">Review Description:</label>
+                <input type="text" id="review__desc">
+
+                <label for="review__img">Link an image of the destination:</label>
+                <input type="text" id="review__img">
+
+                <input type="submit">
+            </form>
+        </main>
+    </div>
+
+</body>
+
+</html>
