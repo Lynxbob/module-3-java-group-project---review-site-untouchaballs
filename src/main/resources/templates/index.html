@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiker's guide to the US</title>
     <link rel="stylesheet" href="/css/style.css"  >
     <link rel="stylesheet" href="/css/layout.css"  >
+
 </head>
 
 <header>
@@ -29,63 +29,62 @@
 </div>
 
 <th:block th:each="category: ${categories.getAllCategories()}">
-<div class="category">
 
-    <!--/*@thymesVar id="name" type="String"*/-->
-    <a th:href="@{'/cities/' + ${category.name}}" href="./categories-page.html">
-        <h2 class="category__header" th:text="${category.name}">Miami
-        </h2>
-        <div class="category__img">
-            <img id="category__img" src="../static/images/miami_cropped.jpg" th:src="@{'' + ${category.imageUrl}}" width="1000px" height="350px" alt="Picture of City">
-        </div>
-    </a>
-</div>
+    <div class="category">
+
+        <!--/*@thymesVar id="name" type="String"*/-->
+        <a th:href="@{'/cities/' + ${category.name}}" href="./categories-page.html">
+            <h2 class="category__header" th:text="${category.name}">Miami
+            </h2>
+            <div class="category__img">
+                <img id="category__img" src="../static/images/miami_cropped.jpg" th:src="@{'' + ${category.imageUrl}}"
+                     width="1000px" height="350px" alt="Picture of City">
+            </div>
+        </a>
+    </div>
+
 </th:block>
 
 
+<!--<div class="hashtags" >-->
 
 
-<div class="hashtags" >
+<!--    <div class="inlined">-->
+<!--        <div class="block">-->
+<!--            <div class="all_hashtags">-->
+<!--                #Restaurants-->
+<!--            </div>-->
+<!--            <div class="all_hashtags">-->
+<!--                #Nightlife-->
+<!--            </div >-->
+<!--            <div>-->
+<!--                #Bridge-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="block">-->
+<!--            <div class="all_hashtags">-->
+<!--                #Shopping-->
+<!--            </div >-->
+<!--            <div class="all_hashtags">-->
+<!--                #Culture-->
+<!--            </div >-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<section class="hashtags">
     <h2 id="hashtags__title">Hashtags</h2>
+    <aside class="hash__list">
+        <ul class="hash__list__content" style="list-style-type: none;">
+            <th:block th:each="hashtag: ${hashtags.getAllHashtags()}">
+                <li><a th:text="${hashtag.hashtag} + ${hashtag.name} " th:href="'/hashtags/' + ${hashtag.name}">#Restaurants </a></li>
 
-    <div class="inlined">
-        <div class="block">
-            <div class="all_hashtags">
-                #Restaurants
-            </div>
-            <div class="all_hashtags">
-                #Nightlife
-            </div >
-            <div>
-                #Bridge
-            </div>
-        </div>
-
-        <div class="block">
-            <div class="all_hashtags">
-                #Shopping
-            </div >
-            <div class="all_hashtags">
-                #Culture
-            </div >
-        </div>
-    </div>
-</div>
-
-
-
-    <!-- <section class="hashtags">
-        <aside class="hash__list">
-            <ul class="hash__list__content" style="list-style-type: none;" >
-                <li><a href="">#Restaurants </a></li>
-                <li><a href="">#Nightlife </a></li>
-                <li><a href="">#Bridge </a></li>
-                <li><a href="">#Shopping</a></li>
-                <li><a href="">#Culture</a></li>
-            </ul>
-        </aside>
-    </section> -->
-
+            </th:block>
+        </ul>
+    </aside>
+</section>
 
 
 </body>
