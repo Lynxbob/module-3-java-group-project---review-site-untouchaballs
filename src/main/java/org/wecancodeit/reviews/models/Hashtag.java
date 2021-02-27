@@ -1,5 +1,7 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.models;
 
+
+import org.wecancodeit.reviews.models.Review;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -4,8 +4,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 
+
 body{
     font-family: Oswald;
+}
+
+nav{
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.review__desc{
+    
+    font-size: 20px;
 }
 
 

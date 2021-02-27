@@ -4,10 +4,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import org.wecancodeit.reviews.*;
-
-import java.awt.image.AreaAveragingScaleFilter;
-import java.util.ArrayList;
+import org.wecancodeit.reviews.models.Category;
+import org.wecancodeit.reviews.models.Hashtag;
+import org.wecancodeit.reviews.models.Review;
+import org.wecancodeit.reviews.storage.CategoryRepository;
+import org.wecancodeit.reviews.storage.HashtagRepository;
+import org.wecancodeit.reviews.storage.ReviewRepository;
 
 @Component
 public class Populator implements CommandLineRunner {
@@ -30,13 +32,13 @@ public class Populator implements CommandLineRunner {
         Category miami = new Category("Miami", "images/miami_cropped.jpg");
         Category columbus = new Category("Columbus", "images/columbus.jpg");
         Category charleston = new Category("Charleston","images/charleston_skyline.jpg");
-        Category sanFrancisco = new Category("San Francisco","images/san_francisco.jpg");
+        Category sanFrancisco = new Category("San Francisco","images/sanfrancisco_new.jpg");
 
 
         Review wynwoodWalls = new Review("Wynwood Walls", ("Located in a neighborhood between the design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists, creatives and young innovators alike. \n" +
                 "It's filled with beautiful art galleries with known artist from all over the world, and as visitors walk through the streets of this lively neighborhood, murals decorate it's wall making it a unique experience.\n" +
                 "You can find high end restaurants as well as food trucks with a variety of type of food. \n" +
-                "Every second Saturday of the month, the neighborhood has an event called \"Art Walk\" where galleries are open until midnight and local artist setup shops in an open area, bazaar alike. "), "/images/Wynwood.jpg", miami);
+                "Every second Saturday of the month, the neighborhood has an event called \"Art Walk\" where galleries are open until midnight and local artist setup shops in an open area, bazaar alike. "), "/images/1024px-boombox.jpg", miami);
 
         Review lincolnRoad = new Review("Lincoln Rd",("Lincoln Rd is a ten-block mecca of shopping dining and entertainment that is constantly filled with a mix of tourists and locals which creates an ultimately energy for people-watching.\n" +
                 "During the day is the perfect place to walk down the road with family and friends. The outdoor sitting provided by restaurants gives you that unique experience of enjoying a nice meal, while watching people from all over the world walk by.\n" +
@@ -61,8 +63,8 @@ public class Populator implements CommandLineRunner {
 
         Review morrisIslandLighthouse = new Review("Morris Island Lighthouse" , "Morris Island Lighthouse is in charleston county on Morris island a bit away from the main city. The Lighthouse is off the shore and gives you a great view of the ocean, and is an interesting visit. The only con is the inconvenience of visiting the lighthouse.", "/images/morris-island-lighthouse.jpg", charleston);
 
-        Review franklinPark = new Review ("Franklin Park Conservatory and Botanical Gardens",("Franklin Park Conservatory and Botanical Gardens is a botanical garden and conservatory. " +
-                "It is open daily and an admission fee is charged. There are many world class custom glss exhibits interspersed throughout the collections. " +
+        Review franklinPark = new Review ("Franklin Park Conservatory and Botanical Gardens",("Franklin Park Conservatory and Botanical Gardens is a major attraction to come visit when in the beautiful city of Columbus Ohio. " +
+                "It is open daily and an admission fee is charged. There are many world class custom glass exhibits interspersed throughout the collections. " +
                 "The structure on the inside is really great, the location is nice, and the decor is impressive and modern. " +
                 "Perfect location to spend the day with the family exploring around, as well as perfect venue for weddings and special occasions."),"/images/conservatory.jpg",columbus);
 
@@ -105,9 +107,9 @@ public class Populator implements CommandLineRunner {
 
         Hashtag nightLife = new Hashtag("Nightlife");
         nightLife.addReview(wynwoodWalls);
-        nightLife.addReview(chinaTown);
         nightLife.addReview(lincolnRoad);
         nightLife.addReview(brickellArea);
+        nightLife.addReview(chinaTown);
 
         Hashtag restaurants = new Hashtag("Restaurants");
         restaurants.addReview(fisherManWharf);
