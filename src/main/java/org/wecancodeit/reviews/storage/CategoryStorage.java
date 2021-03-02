@@ -1,9 +1,9 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.models.Category;
+import org.wecancodeit.reviews.storage.CategoryRepository;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
 

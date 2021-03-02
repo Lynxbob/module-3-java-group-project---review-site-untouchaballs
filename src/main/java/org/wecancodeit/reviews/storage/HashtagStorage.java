@@ -1,6 +1,8 @@
-package org.wecancodeit.reviews;
+package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.models.Hashtag;
+import org.wecancodeit.reviews.storage.HashtagRepository;
 
 import java.util.Optional;
 
