@@ -80,11 +80,15 @@
     <aside class="hash__list">
         <ul class="hash__list__content" style="list-style-type: none;">
             <th:block th:each="hashtag: ${hashtags.getAllHashtags()}">
-                <li><a th:text="${hashtag.hashtag} + ${hashtag.name} " th:href="'/hashtags/' + ${hashtag.name}">#Restaurants </a></li>
+                <li class="hash__list__item"><a th:text="${hashtag.hashtag} + ${hashtag.name} " th:href="'/hashtags/' + ${hashtag.name}">#Restaurants </a></li>
 
             </th:block>
         </ul>
     </aside>
+    <form action="/add-hashtag" class="hash__box">
+        <input class="hashtag__input__box" type="text" name="hashtag">
+        <input class="hashtag__submit" type="submit" value="Add Hashtag">
+    </form>
 </section>
 
 

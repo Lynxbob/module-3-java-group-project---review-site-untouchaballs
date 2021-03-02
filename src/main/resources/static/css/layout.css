@@ -108,10 +108,38 @@ footer{
     font-weight: 500;
 }
 
+.hash__list__content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.hash__list__item {
+    padding: 1.5rem;
+}
+
+.hash__box {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
 .nav-bar {
     list-style-type:none;
     display: flex;
     flex-direction: row;
+}
+
+.hashtag__input__box {
+    align-self: center;
+    margin: 1rem;
+    max-width: 25%;
+}
+
+.hashtag__submit {
+    align-self: center;
+    margin: 1rem;
+    max-width: 25%;
 }
 
 
