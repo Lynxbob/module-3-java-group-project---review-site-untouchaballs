@@ -26,6 +26,18 @@ public class CategoryStorage {
         return categoryRepo.findAll();
     }
 
+    public Category retrieveById(long id) {
+        Category retrievedCategory;
+        Optional<Category> categoryOptional = categoryRepo.findById(id);
+        if(!categoryOptional.isEmpty()) {
+            retrievedCategory = categoryOptional.get();
+        }
+        else {
+            retrievedCategory = null;
+        }
+
+        return retrievedCategory;
+    }
     public Category retrieveCategoryByName(String name) {
         Category retrievedCategory;
         Optional<Category> categoryOptional = categoryRepo.findByName(name);

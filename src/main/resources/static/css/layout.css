@@ -108,12 +108,25 @@ footer{
     font-weight: 500;
 }
 
+.nav-bar {
+    list-style-type:none;
+    display: flex;
+    flex-direction: row;
+}
 
 
 
 
 /* CATEGORY PAGE */
 
+.reviews {
+    padding-top: 1.5rem;
+
+}
+.review__container{
+    min-height: 75vh;
+
+}
 .city__title{
     display: flex;
     justify-content: center;
@@ -127,6 +140,10 @@ h3{
     align-items: center;
     justify-content: center;
     align-self: stretch;
+}
+
+.category__footer{
+    align-self: flex-end;
 }
 
 
@@ -167,6 +184,11 @@ ul li {
 
 /* HASHTAG PAGE */
 
+.hashtag__container {
+    min-height: 75vh;
+
+}
+
 .hashtag__title{
     display: flex;
     justify-content: center;
@@ -178,9 +200,9 @@ ul li {
 #footer{
 	display: flex;
 	justify-content: center;
+    align-self: flex-end;
 	margin : 20px;
 }
-
 
 
 

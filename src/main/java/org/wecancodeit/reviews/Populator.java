@@ -5,9 +5,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import org.wecancodeit.reviews.models.Category;
+import org.wecancodeit.reviews.models.Comment;
 import org.wecancodeit.reviews.models.Hashtag;
 import org.wecancodeit.reviews.models.Review;
 import org.wecancodeit.reviews.storage.CategoryRepository;
+import org.wecancodeit.reviews.storage.CommentRepository;
 import org.wecancodeit.reviews.storage.HashtagRepository;
 import org.wecancodeit.reviews.storage.ReviewRepository;
 
@@ -20,11 +22,14 @@ public class Populator implements CommandLineRunner {
     private ReviewRepository reviewRepo;
     @Autowired
     private HashtagRepository hashtagRepo;
+    @Autowired
+    private CommentRepository commentRepo;
 
-    public Populator(CategoryRepository categoryRepo, ReviewRepository reviewRepo, HashtagRepository hashtagRepo) {
+    public Populator(CategoryRepository categoryRepo, ReviewRepository reviewRepo, HashtagRepository hashtagRepo, CommentRepository commentRepo) {
         this.categoryRepo = categoryRepo;
         this.reviewRepo = reviewRepo;
         this.hashtagRepo = hashtagRepo;
+        this.commentRepo = commentRepo;
     }
 
     @Override
@@ -103,6 +108,10 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(franklinPark);
         reviewRepo.save(cosi);
         reviewRepo.save(northMarket);
+
+        Comment wynwoodComment = new Comment("Ricardo Gutierrez", "Great place to visit!", wynwoodWalls);
+
+        commentRepo.save(wynwoodComment);
 
 
         Hashtag nightLife = new Hashtag("Nightlife");

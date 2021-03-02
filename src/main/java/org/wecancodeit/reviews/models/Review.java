@@ -21,6 +21,8 @@ public class Review {
     private Collection<Hashtag> hashtags;
     @ManyToOne
     private Category category;
+    @OneToMany(mappedBy = "review")
+    private Collection<Comment> comments;
 
     protected Review() {
     }
@@ -32,6 +34,7 @@ public class Review {
         this.imageUrl = imageUrl;
         this.category = category;
         this.hashtags = new ArrayList<>();
+        this.comments = new ArrayList<>();
     }
 
     public void addHashtag(Hashtag hashtag) {
@@ -56,6 +59,10 @@ public class Review {
 
     public long getId() {
         return id;
+    }
+
+    public Collection<Comment> getComments() {
+        return comments;
     }
 
     @Override

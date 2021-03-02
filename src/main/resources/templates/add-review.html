@@ -15,21 +15,21 @@
     <div class="add__review__container">
         <main class="add__review__main">
             <form action="/add-review/success/" method="post">
-                <label for="cityList">Choose a City:</label>
-                <select name="city" id="cityList">
-                    <th:block th:each="category:${categories}">
+                <label for="category">Choose a City:</label>
+                <select name="category" id="category">
+                    <th:block th:each="category:${categories.getAllCategories()}">
                         <option th:value="${category.id}" th:text="${category.name}">Miami</option>
                     </th:block>
                 </select>
 
-                <label for="review__name">Review Name:</label>
-                <input type="text" id="review__name">
+                <label for="reviewName">Review Name:</label>
+                <input type="text" name="reviewName" id="reviewName">
 
-                <label for="review__desc">Review Description:</label>
-                <input type="text" id="review__desc">
+                <label for="reviewDesc">Review Description:</label>
+                <input type="text" name="reviewDesc" id="reviewDesc">
 
-                <label for="review__img">Link an image of the destination:</label>
-                <input type="text" id="review__img">
+                <label for="reviewImg">Link an image of the destination:</label>
+                <input type="text"  name="reviewImg" id="reviewImg">
 
                 <input type="submit">
             </form>
