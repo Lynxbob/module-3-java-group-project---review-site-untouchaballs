@@ -15,6 +15,7 @@ public class Category {
     private long id;
     private String name;
     private String imageUrl;
+    private String videoUrl;
 
     @OneToMany(mappedBy = "category")
     private Collection<Review> reviews;
@@ -24,9 +25,10 @@ public class Category {
 
     }
 
-    public Category(String name, String imageUrl) {
+    public Category(String name, String imageUrl, String videoUrl) {
         this.name = name;
         this.imageUrl = imageUrl;
+        this.videoUrl = videoUrl;
         this.reviews = new ArrayList<>();
 
     }
@@ -44,6 +46,8 @@ public class Category {
         return imageUrl;
     }
 
+    public String getVideoUrl(){ return videoUrl;}
+
     public void addToReviews(Review review) {
         reviews.add(review);
       
@@ -59,6 +63,7 @@ public class Category {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
+                ", videoUrl='" + videoUrl + '\'' +
                 ", reviews=" + reviews +
                 '}';
     }
@@ -73,6 +78,8 @@ public class Category {
         if (id != category.id) return false;
         if (name != null ? !name.equals(category.name) : category.name != null) return false;
         return imageUrl != null ? imageUrl.equals(category.imageUrl) : category.imageUrl == null;
+
+
     }
 
     @Override
@@ -80,6 +87,7 @@ public class Category {
         int result = (int) (id ^ (id >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (imageUrl != null ? imageUrl.hashCode() : 0);
+        result = 31 * result + (videoUrl != null ? videoUrl.hashCode() : 0);
         return result;
     }
 }
