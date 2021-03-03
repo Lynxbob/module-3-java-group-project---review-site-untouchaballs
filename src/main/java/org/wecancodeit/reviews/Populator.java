@@ -34,10 +34,10 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Category miami = new Category("Miami", "images/miami_cropped.jpg");
-        Category columbus = new Category("Columbus", "images/columbus_skyline.jpg");
-        Category charleston = new Category("Charleston","images/charleston_skyline.jpg");
-        Category sanFrancisco = new Category("San Francisco","images/sanfrancisco_new.jpg");
+        Category miami = new Category("Miami", "images/miami_cropped.jpg", "https://www.youtube.com/embed/1lasGLVq1zQ?start=7");
+        Category columbus = new Category("Columbus", "images/columbus_skyline.jpg","https://www.youtube.com/embed/N9zn3dv_zkw");
+        Category charleston = new Category("Charleston","images/charleston_skyline.jpg","https://www.youtube.com/embed/uvpr1PWAHsY");
+        Category sanFrancisco = new Category("San Francisco","images/sanfrancisco_new.jpg","https://www.youtube.com/embed/hanE_bysWro");
 
 
         Review wynwoodWalls = new Review("Wynwood Walls", ("Located in a neighborhood between the design district and downtown, Wynwood has become a haven for aspiring painters, graffiti artists, creatives and young innovators alike. \n" +
