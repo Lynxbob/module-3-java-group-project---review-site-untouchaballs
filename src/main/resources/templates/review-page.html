@@ -47,7 +47,15 @@
                     You can find high end restaurants as well as food trucks with a variety of type of food.
                     Every second Saturday of the month, the neighborhood has an event called "Art Walk" where galleries
                     are open until midnight and local artist setup shops in an open area, bazar alike.
+
                     </p>
+                    <th:block th:each="hashtag:${review.hashtags}">
+                        <a id="review__hashtag" th:href="'/hashtags/' + ${hashtag.name}" th:text="${hashtag.hashtag} + ${hashtag.name}">#Hashtag</a>
+                    </th:block>
+                    <form th:action="'/cities/' + ${review.category.name} + '/' + ${review.title} + '/add-hashtag/'" method="post" class="hash__box">
+                        <input class="hashtag__input__box" type="text" name="hashtag">
+                        <input class="hashtag__submit" type="submit" value="Add Hashtag">
+                    </form>
                 </div>
 <!--                <a th:href="@{ '/cities/' + ${review.category.name}}"     href="./categories-page.html" class="">Back to <span th:text="${review.category.name}">Miami</span></a>-->
             </section>

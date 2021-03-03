@@ -1,5 +1,6 @@
 package org.wecancodeit.reviews.storage;
 
+import org.hibernate.service.spi.OptionallyManageable;
 import org.springframework.stereotype.Service;
 import org.wecancodeit.reviews.models.Hashtag;
 import org.wecancodeit.reviews.storage.HashtagRepository;
@@ -35,6 +36,11 @@ public class HashtagStorage {
         }
 
         return retrievedHashtag;
+    }
+
+    public boolean doesHashtagExist(String name) {
+        Optional<Hashtag> hashtagOptional = hashtagRepo.findByName(name);
+        return !hashtagOptional.isEmpty();
     }
 }
 

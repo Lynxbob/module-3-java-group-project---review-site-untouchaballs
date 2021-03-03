@@ -61,6 +61,10 @@ public class Review {
         return id;
     }
 
+    public Collection<Hashtag> getHashtags() {
+        return hashtags;
+    }
+
     public Collection<Comment> getComments() {
         return comments;
     }
