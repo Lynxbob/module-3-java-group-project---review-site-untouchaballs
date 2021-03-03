@@ -3,18 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="/css/style.css"  >
+    <link rel="stylesheet" href="/css/layout.css"  >
     <title>Hiker's Guide To the US</title>
 </head>
 
-<body>
+<body class="add__review__body">
 
     <header class="add__review__header">
-        <h1 class="add__review__text">Add new Review</h1>
+        <a class="link__to__homepage" th:href="'/'" href="./index.html">Back to <span >Home Page</span></a>
+        <h1 class="add__review__text">Add New Review</h1>
     </header>
 
     <div class="add__review__container">
         <main class="add__review__main">
+            
             <form action="/add-review/success/" method="post">
+                <div class="form">
                 <label for="category">Choose a City:</label>
                 <select name="category" id="category">
                     <th:block th:each="category:${categories.getAllCategories()}">
@@ -22,20 +28,23 @@
                     </th:block>
                 </select>
 
-                <label for="reviewName">Review Name:</label>
+                <label class="review__name__label" for="reviewName">Review Name:</label>
                 <input type="text" name="reviewName" id="reviewName">
 
-                <label for="reviewDesc">Review Description:</label>
+                <label class="review__desc__label" for="reviewDesc">Review Description:</label>
                 <input type="text" name="reviewDesc" id="reviewDesc">
 
-                <label for="reviewImg">Link an image of the destination:</label>
+                <label class= "link__to__img" for="reviewImg">Link an image of the destination:</label>
                 <input type="text"  name="reviewImg" id="reviewImg">
 
-                <input type="submit">
+                
+                <input id="submit__review" type="submit">
+            </div>
             </form>
         </main>
     </div>
 
+    <footer class="add__review__footer">Hiker's Guide to the US | 2021 © |</footer>
 </body>
 
 </html>
