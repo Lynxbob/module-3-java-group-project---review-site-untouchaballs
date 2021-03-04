@@ -22,8 +22,13 @@ a {
 .nav__home a{
     font-size: 25px;
     font-weight: 500;
-    padding-left: 10px;
-    text-decoration: none;
+    padding: 1rem;
+    margin: 5px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 7px;  
+    background-color: black;
+    color: white;
 }
 
 #main__title{
