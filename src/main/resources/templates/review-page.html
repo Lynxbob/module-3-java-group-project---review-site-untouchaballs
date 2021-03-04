@@ -63,18 +63,25 @@
         
         <section class="comments" id="comments">
             <h2 class="comment__header">Comments</h2>
-            <article class="comment__section">
-                <th:block th:each="comment:${review.getComments()}">
-                    <h3 class="comment__name" th:text="${comment.authorName}">Ricardo</h3>
-                    <p class="comment__desc" th:text="${comment.description}">Awesome place!</p>
-                </th:block>
-            </article>
-            <form th:action="'/cities/' + ${review.category.name} + '/'  + ${review.title} + '/add-comment/'" method="post">
-                <label for="comment__author">Name</label>
-                <input type="text" id="comment__author" name="authorName">
-                <input type="text" id="add__comment" name="description">
-                <input type="submit" id="submit__comment" value="Add Comment">
 
+            <div class="comment__section">
+                <th:block th:each="comment:${review.getComments()}">
+                  
+                <h3 class="comment__name" th:text="${comment.authorName}">Ricardo</h3>
+                <p class="comment__desc" th:text="${comment.description}">Awesome place!</p>
+                
+                </th:block>
+            </div> 
+
+
+            <form th:action="'/cities/' + ${review.category.name} + '/'  + ${review.title} + '/add-comment/'" method="post">
+                <div class="comment__input">
+                <label class="comment__author" for="comment__author">Name</label>
+                <input type="text" id="comment__author" name="authorName">
+                <label class="add__comment" for="add__comment">Comment Description</label>
+                <textarea type="text" id="add__comment" name="description"></textarea>
+                <input type="submit" id="submit__comment" value="Add Comment">
+                </div>
             </form>
 
         </section>

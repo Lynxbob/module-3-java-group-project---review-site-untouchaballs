@@ -3,13 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Hiker's Guide to the US</title>
+    <link rel="stylesheet" href="/css/style.css"  >
+    <link rel="stylesheet" href="/css/layout.css"  >
 </head>
-<body>
+<body class="review__submitted__body">
 
-<h1 class="review__submitted">Your Review was submitted.</h1>
-<h2>Thank You!</h2>
+<main class="review__submitted">
+<h1 id="review__submitted__title">Your Review was submitted.</h1>
+<h2 id="thank__you">Thank You!</h2>
 
-<a th:href="'/'" href="./index.html" class="">Back to <span >Home Page</span></a>
+
+<a class= "back__home__from__review__submitted" th:href="'/'" href="./index.html" >Back to <span >Home Page</span></a>
+</main>
+
+
 
 <footer>Hiker's Guide to the US | 2021 © |</footer>
 </body>
