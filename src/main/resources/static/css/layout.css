@@ -8,6 +8,9 @@ body {
 
 
 /* HOME PAGE */
+a {
+    text-decoration: none;
+}
 
 #head{
     background-color:  rgb(207, 219, 241);
