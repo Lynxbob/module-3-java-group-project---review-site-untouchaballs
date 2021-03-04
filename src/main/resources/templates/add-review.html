@@ -12,7 +12,9 @@
 <body class="add__review__body">
 
     <header class="add__review__header">
-        <a class="link__to__homepage" th:href="'/'" href="./index.html">Back to <span >Home Page</span></a>
+        <ul class="nav-bar"> 
+            <li class="nav"><a th:href="'/'" href="./index.html">Back to <span >Home Page</span></a></li> 
+        </ul>
         <h1 class="add__review__text">Add New Review</h1>
     </header>
 
@@ -21,7 +23,7 @@
             
             <form action="/add-review/success/" method="post">
                 <div class="form">
-                <label for="category">Choose a City:</label>
+                <label class="category__label" for="category">Choose a City:</label>
                 <select name="category" id="category">
                     <th:block th:each="category:${categories.getAllCategories()}">
                         <option th:value="${category.id}" th:text="${category.name}">Miami</option>

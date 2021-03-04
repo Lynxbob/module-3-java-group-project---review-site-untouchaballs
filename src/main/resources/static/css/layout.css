@@ -136,8 +136,7 @@ footer{
     margin: 5px;
     border: 1px solid blue;
     box-sizing: border-box;
-    border-radius: 7px;
-    
+    border-radius: 7px;  
 }
 
 .nav a{
@@ -195,11 +194,11 @@ h3{
 /* REVIEW PAGE */
 
 ul li {
-    padding-left: 1rem;
     padding-right: 1rem;
     padding-top: .5rem;
-    padding-bottom: .5rem;
-    
+    padding-bottom: .5rem;   
+    padding-left: 1rem;
+  
 }
 
 .review__title{
@@ -271,11 +270,10 @@ ul li {
 }
 
 
-.link__to__homepage{
-
-    padding-left: 10px;
-    text-decoration: none;
+.link__to__homepage a{
+    text-decoration: none; 
 }
+
 
 .add__review__text{
     display: flex;
