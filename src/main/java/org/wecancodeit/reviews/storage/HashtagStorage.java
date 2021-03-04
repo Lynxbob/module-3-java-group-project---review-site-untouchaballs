@@ -33,7 +33,7 @@ public class HashtagStorage {
             retrievedHashtag = hashtagOptional.get();
         }
         else {
-            throw new ResourceNotFoundException("Hashtag Page does not exist.");
+            retrievedHashtag = null;
         }
 
         return retrievedHashtag;
