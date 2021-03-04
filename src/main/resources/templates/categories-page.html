@@ -16,10 +16,9 @@
   
     <body class="category__body">
     
-        <header class="category__header">
+        <header>
             <ul class="nav-bar"> 
-                <li class="nav"><a th:href="'/'" href="./index.html" class="">Back to <span >Home Page</span></a></li>
-                
+                <li class="nav"><a th:href="'/'" href="./index.html" class="">Back to <span >Home Page</span></a></li> 
             </ul>
                 <h1 class="city__title" th:text="${category.name}">Miami</h1>
             
@@ -28,7 +27,7 @@
         <div class="review__container">
             <main class="reviews">
                 <div class="videos">
-                <iframe width="560" height="315" th:src="@{${category.videoUrl}}" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="660" height="415" th:src="@{${category.videoUrl}}" src="https://www.youtube.com/embed/" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <th:block th:each="review: ${category.reviews}">
                 <a href="./review-page.html" th:href="@{ '/cities/' + ${category.name} + '/' + ${review.title}}">

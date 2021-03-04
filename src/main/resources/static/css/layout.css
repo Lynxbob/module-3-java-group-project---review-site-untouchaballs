@@ -1,20 +1,32 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
-body {background-color: rgb(249, 251, 252);}
+body {
+    background-color: rgb(249, 251, 252);
+    font-family: Oswald;
+}
 
 
 /* HOME PAGE */
 
 #head{
     background-color:  rgb(207, 219, 241);
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 70px;  
     border-radius: 7px;
+}
+
+.nav__home a{
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 10px;
+    text-decoration: none;
 }
 
 #main__title{
     display: flex;
     justify-content: center;
+    font-size: 45px;
     margin-top: 7px;
     border-bottom: 2px solid black;
 }
@@ -23,8 +35,9 @@ body {background-color: rgb(249, 251, 252);}
     margin-top: -40px;
     text-align: center;
     padding: 10px;
-    padding-top: 25px;
+    padding-top: 10px;
     margin-bottom: 20px;
+    font-size: 27px;
 }
 
 .header__image{
@@ -32,31 +45,25 @@ body {background-color: rgb(249, 251, 252);}
     justify-content: center;
 }
 
-.second__main__title{
+#recent__cities{
     display: flex;
     justify-content: center;
-    
+    font-size: 35px;
+    border-bottom: 2px solid black;
 }
 
 
 h2{
     display: flex;
     justify-content: center;
-    
+    font-size: 35px;  
 }
+
 
 .category__img{
     display: flex;
     justify-content: center;
 }
-
-/* .videos{
-    background-color:  rgb(207, 219, 241);
-    margin-top: 20px;
-    padding-top: 10px;
-    padding-bottom: 70px;  
-    border-radius: 7px;
-} */
 
 
 .hashtags{
@@ -67,11 +74,15 @@ h2{
     border-radius: 7px;
 }
 
+#hashtags__title{
+    font-size: 35px;
+}
+
 footer{
 	display: flex;
 	justify-content: center;
     margin : 20px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
 }
 
@@ -79,6 +90,8 @@ footer{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    font-size: 25px;
+    font-weight: 500;
 }
 
 .hash__list__item {
@@ -109,6 +122,27 @@ footer{
     max-width: 25%;
 }
 
+
+
+
+
+
+/* CATEGORY AND REVIEW PAGE NAV */
+
+.nav{
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 7px;
+    margin: 5px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    border-radius: 7px;
+    
+}
+
+.nav a{
+    text-decoration: none; 
+}
 
 
 
@@ -144,11 +178,16 @@ h3{
     align-items: center;
     justify-content: center;
     align-self: stretch;
+    font-size: 25px;
 }
 
 .category__footer{
     align-self: flex-end;
 }
+
+
+
+
 
 
 
@@ -160,6 +199,7 @@ ul li {
     padding-right: 1rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
+    
 }
 
 .review__title{
@@ -183,7 +223,12 @@ ul li {
     margin-right: 25px;
     background-color:  rgb(207, 219, 241);
     border-radius: 7px;
+    font-size: 27px;
 }
+
+
+
+
 
 
 /* HASHTAG PAGE */
@@ -207,6 +252,11 @@ ul li {
     align-self: flex-end;
 	margin : 20px;
 }
+
+
+
+
+
 
 
 /* ADD-REVIEW PAGE */
