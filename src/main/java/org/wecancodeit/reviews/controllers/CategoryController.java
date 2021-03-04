@@ -22,9 +22,6 @@ public class CategoryController {
 
         Category category = categoryStorage.retrieveCategoryByName(categoryTitle);
 
-        if(category == null) {
-            return "error";
-        }
 
 
 

@@ -1,6 +1,7 @@
 package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.exceptions.ResourceNotFoundException;
 import org.wecancodeit.reviews.models.Category;
 import org.wecancodeit.reviews.storage.CategoryRepository;
 
@@ -45,7 +46,7 @@ public class CategoryStorage {
             retrievedCategory = categoryOptional.get();
         }
         else {
-            retrievedCategory = null;
+            throw new ResourceNotFoundException("City of " + name + " is not in the database or does not exist");
         }
 
         return retrievedCategory;

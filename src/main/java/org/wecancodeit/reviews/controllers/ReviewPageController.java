@@ -29,11 +29,6 @@ public class ReviewPageController {
     public String displayReviewPage(@PathVariable String categoryTitle, @PathVariable String reviewTitle, Model model) {
 
         Review review = reviewStorage.retrieveReviewByTitle(reviewTitle);
-        if(review == null) {
-            return "error";
-        }
-
-
 
         model.addAttribute("review", review);
         return "review-page";

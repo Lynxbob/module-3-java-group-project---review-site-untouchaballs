@@ -2,6 +2,7 @@ package org.wecancodeit.reviews.storage;
 
 import org.hibernate.service.spi.OptionallyManageable;
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.exceptions.ResourceNotFoundException;
 import org.wecancodeit.reviews.models.Hashtag;
 import org.wecancodeit.reviews.storage.HashtagRepository;
 
@@ -32,7 +33,7 @@ public class HashtagStorage {
             retrievedHashtag = hashtagOptional.get();
         }
         else {
-            retrievedHashtag = null;
+            throw new ResourceNotFoundException("Hashtag Page does not exist.");
         }
 
         return retrievedHashtag;

@@ -1,6 +1,7 @@
 package org.wecancodeit.reviews.storage;
 
 import org.springframework.stereotype.Service;
+import org.wecancodeit.reviews.exceptions.ResourceNotFoundException;
 import org.wecancodeit.reviews.models.Review;
 import org.wecancodeit.reviews.storage.ReviewRepository;
 
@@ -32,7 +33,7 @@ public class ReviewStorage {
             retrievedReview = reviewOptional.get();
         }
         else {
-            retrievedReview = null;
+            throw new ResourceNotFoundException("Error finding review with title " + title);
         }
 
         return retrievedReview;
