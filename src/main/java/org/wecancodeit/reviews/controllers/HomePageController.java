@@ -18,13 +18,14 @@ public class HomePageController {
         this.categoryStorage = categoryStorage;
         this.hashtagStorage = hashtagStorage;
     }
-    @RequestMapping("/hikers-guide")
+    @RequestMapping("/")
     public String displayHomePage(Model model) {
         model.addAttribute("categories", categoryStorage);
         model.addAttribute("hashtags", hashtagStorage);
 
         return "index";
     }
+
 
     @PostMapping("/add-hashtag")
     public String addHashtag(String hashtag) {

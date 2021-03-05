@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css"  >
-    <link rel="stylesheet" href="./css/layout.css"  >
+    <link rel="stylesheet" href="../../css/style.css"  >
+    <link rel="stylesheet" href="../../css/layout.css"  >
 
 
     <title>Hiker's guide to the US</title>
@@ -21,7 +21,7 @@
 
     <header class="review__header">
         <ul class="nav-bar">
-            <li class="nav"><a th:href="'/hikers-guide'"  href="./index.html" class="">Back to <span>Home Page</span></a></li>
+            <li class="nav"><a th:href="'/'"  href="./index.html" class="">Back to <span>Home Page</span></a></li>
             <li class="nav"><a th:href="@{ '/cities/' + ${review.category.name}}"     href="./categories-page.html" class="">Back to <span th:text="${review.category.name}">Miami</span></a></li>
         </ul>
 
