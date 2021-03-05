@@ -455,7 +455,16 @@ ul li {
     border: 1px solid black;
     box-sizing: border-box;
     border-radius: 7px; 
+    background-color: black;
+    color: white;
 }
+
+.back__home__from__review__submitted a{
+    text-decoration: none; 
+}
+
+
+
 
 
 
